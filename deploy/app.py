@@ -16,10 +16,10 @@ import sys
 app = Flask(__name__)
 
 # Tentukan path weight dan model yang sudah ditrain
-MODEL_PATH = 'model/simple.h5'
+MODEL_PATH = 'model/model.h5'
 # Load model
 model = load_model(MODEL_PATH)
-model._make_predict_function()         
+#model._make_predict_function()         
 # Msg ke server, model berhasil di-load
 print('Model loaded. Start serving...')
 
@@ -48,14 +48,24 @@ def predict():
 	# resize png dan convert ke grayscale
 	n_size = 28
 	x = np.array(Image.open('output.png').resize((n_size, n_size)).convert('L'))
+	print(x.dtype)
 	# image invert
 	x = np.invert(x)
+	# normalisasi nilai piksel
+	x = x.astype(np.float32)
+	x /= 255
 	# reshape image ke dimensi yang dibutuhkan model
 	x = x.reshape(1,-1)
 	print ("data prep stage")
 	# prediksi
 	out = model.predict(x)
 	response = np.array_str(np.argmax(out,axis=1))
+	
+	# pred = out.reshape(-1)
+	# idx_sort = pred.argsort()[::-1][:3]
+	# for i in range (3):
+	# 	print('Class {} - Prob :{}'.format(idx_sort[i],pred[idx_sort[i]]))
+	#print(pred.argsort()[::-1][:3])
 
 	return response
 	
