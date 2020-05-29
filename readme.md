@@ -7,4 +7,4 @@ Untuk membuild model, Anda dapat membuka folder **build**. Pada folder build dis
 <a href="https://colab.research.google.com/github/mdsatria/build_deploy_ai/blob/master/build/Building%20Deep%20Learning%20Model%20dengan%20Google%20Colab.ipynb"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/></a>
 
 ## Deploy
-Pada folder deploy tersedia app sederhana dengan framework Flask https://flask.palletsprojects.com/en/1.1.x/ untuk mendeploy model Deep Learning pada website.
+Pada folder **deploy** tersedia app sederhana dengan framework Flask https://flask.palletsprojects.com/en/1.1.x/ untuk mendeploy model Deep Learning pada website.
