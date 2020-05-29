@@ -61,12 +61,6 @@ def predict():
 	out = model.predict(x)
 	response = np.array_str(np.argmax(out,axis=1))
 	
-	# pred = out.reshape(-1)
-	# idx_sort = pred.argsort()[::-1][:3]
-	# for i in range (3):
-	# 	print('Class {} - Prob :{}'.format(idx_sort[i],pred[idx_sort[i]]))
-	#print(pred.argsort()[::-1][:3])
-
 	return response
 	
 if __name__ == "__main__":
