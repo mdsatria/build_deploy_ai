@@ -1,6 +1,6 @@
-# README
+# Build dan Deploy Deep Feed Forward Network
 
-Repositori ini menjelaskan bagaimana cara membangun dan mendeploy model Deep Learning menggunakan Tensorflow, Numpy dan Flask dengan bahasa Python.
+Repositori ini menjelaskan bagaimana cara membangun dan mendeploy model Deep Learning menggunakan Tensorflow, Numpy dan Flask dengan bahasa Python untuk mengenali tulisan tangan berupa angka.
 
 ## Build
 Untuk membuild model, Anda dapat membuka folder **build**. Pada folder build disediakan script Python untuk membuat model dan notebook yang menjelaskan bagaimana membangun model tersebut. Anda bisa menjalankan notebook langsung dari browser Anda untuk membangun model dengan Google Colab. Buka link berikut untuk mencoba membangun model AI Anda sendiri.
