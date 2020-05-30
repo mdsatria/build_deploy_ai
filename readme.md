@@ -21,3 +21,4 @@ $ pip install -r requirements.txt
 # 3. Run app
 $ python app.py
 ```
+Buka http://localhost:5000
