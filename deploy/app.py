@@ -28,7 +28,6 @@ def convertImage(imgData1):
 	imgstr = re.search(b'base64,(.*)',imgData1).group(1)
 	with open('output.png','wb') as output:
 		output.write(base64.b64decode(imgstr))
-	
 
 @app.route('/')
 def index():
@@ -59,8 +58,7 @@ def predict():
 	print ("data prep stage")
 	# prediksi
 	out = model.predict(x)
-	response = np.array_str(np.argmax(out,axis=1))
-	
+	response = np.array_str(np.argmax(out,axis=1))	
 	return response
 	
 if __name__ == "__main__":
