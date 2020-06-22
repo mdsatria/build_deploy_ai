@@ -62,9 +62,7 @@ def predict():
 	return response
 	
 if __name__ == "__main__":
-	# tentukan port mana app akan berjalan
-	port = int(os.environ.get('PORT', 5000))
-	# locally run app
-	app.run(host='0.0.0.0', port=port)
-	# optional if we want to run in debugging mode
-	app.run()
+	# import serving package
+	from waitress import serve
+	# serve on port 8080
+	serve(app, host="0.0.0.0", port=8080)
