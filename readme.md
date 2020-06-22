@@ -21,6 +21,6 @@ $ pip install -r requirements.txt
 # 3. Run app
 $ python app.py
 ```
-Buka http://localhost:5000
+Buka http://localhost:8080
 
 (*credit for web interface : https://github.com/moinudeen/digit-recognizer-flask-cnn*)
