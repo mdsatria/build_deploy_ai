@@ -1,5 +1,5 @@
-numpy==1.16.5
-Flask==1.1.2
-Pillow==7.1.2
-tensorflow==2.0.1
-waitress==1.4.4
+numpy
+Flask
+Pillow
+tensorflow
+waitress
